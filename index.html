@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Cheque</title>
+    <style>
+          body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 800px;
+            height: 400px;
+            background-color: #d1e7f8;
+            border: 1px solid #000;
+            padding: 20px;
+            position: relative;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        .ifsc {
+            font-weight: bold;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .date {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .date input {
+            border: 1px solid #000;
+            padding: 5px;
+            margin-left: 10px;
+            width: 120px;
+            text-align: center;
+        }
+
+        .Cbody {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .pay, .rupees, .accnumber {
+            margin: 10px 0;
+        }
+
+        .pay::after {
+            content: "";
+            display: inline-block;
+            width: 600px;
+            border-bottom: 1px solid #000;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .rupees::after {
+            content: "";
+            display: inline-block;
+            width: 540px;
+            border-bottom: 1px solid #000;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .accnumber {
+            font-weight: bold;
+            background-color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .footer {
+            border-top: 1px solid #000;
+            padding-top: 10px;
+            margin-top: 10px;
+            position: absolute;
+            bottom: 20px;
+            width: calc(100% - 40px);
+        }
+
+
+        .sign {
+            font-size: 10px;
+            text-align: right;
+            width: 100%;
+        }
+
+        .micr {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .micr > div {
+            padding: 5px;
+            border-radius: 5px;
+            font-family: 'MICR', monospace;
+        }
+
+        .micr-code, .cheque-number, .other-code {
+            background-color: #fff;
+        }
+
+        .micr .micr-code {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .micr .cheque-number {
+            width: 100px;
+        }
+
+        .micr .other-code {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="./images.png" alt="logo" > BANK
+            </div>
+            <div class="ifsc">
+                RTGS / NEFT IFSC : ICICI0XXXXXX
+            </div>
+            <div class="date">
+                Date <input type="text" placeholder="DD/MM/YYYY">
+            </div>
+
+        </div>
+        
+    
+        <div class="Cbody">
+            <div class="pay" >PAY</div>
+            <div class="rupees">RUPEES</div>
+            <div class="accnumber">
+                A/C NO. 012345678901234
+            </div>
+            <div class="footer">
+                <div class="sign">012345678901234 <br> Please sign above</div>
+                <div class="micr">
+                    <div class="cheque-number">123456</div>
+                    <div class="micr-code">123456789</div>
+                    <div class="other-code">123456</div>
+                </div>
+            </div>
+    
+            
+        </div>
+
+    </div>
+    
+
+</body>
+</html>
